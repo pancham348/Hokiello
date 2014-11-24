@@ -9,7 +9,7 @@ TrelloClone.Routers.Boards = Backbone.Router.extend({
 		var newForm = new TrelloClone.Views.BoardsForm();
 		TrelloClone.Collections.boards.fetch();
 		$("#content").html(index.render().$el);
-		$("#form").append(newForm.render().$el);
+		$("#content").append(newForm.render().$el);
 	},
 	
 	boardShow: function(id){

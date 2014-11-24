@@ -1,7 +1,5 @@
 TrelloClone.Views.BoardsForm = Backbone.View.extend({
-    initialize: function() {
-  	    
-  	  },
+  
 	  
 	  events: {
 	  	"click #new-form-button" : "submitForm"
@@ -20,6 +18,7 @@ TrelloClone.Views.BoardsForm = Backbone.View.extend({
 		  var formData = $("#new-board-form").serializeJSON();
 		  var model = new TrelloClone.Models.Board(formData)
 			  model.save();
+		  TrelloClone.Collections.boards.add(model);
 	  }
 
 });

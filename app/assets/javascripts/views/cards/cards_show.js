@@ -1,9 +1,9 @@
-TrelloClone.Views.ListsShow = Backbone.View.extend({
+TrelloClone.Views.CardsShow = Backbone.View.extend({
 	
 	template: JST["cards/show"],
 	
     events: {
-		"click button.destroy" : "destroyList",
+		"click button.destroy" : "destroyCard",
 	},
   
 	initialize: function(options){

@@ -2,7 +2,9 @@
 
 <ul id="board-index">
 	<% boards.each(function(board){ %>
-			<li class="board-list"><a href="#/boards/<%= board.escape('id')%>"><%= board.get("title") %></li>
+			<li class="board-list"><a href="#/boards/<%= board.escape('id')%>"><%= board.get("title") %>
+				<button class="destroy" data-id="<%= board.get('id') %>">Remove</button>
+			</li>
 		<% }) %><br>
 </ul><br>
   <div id='form'>
