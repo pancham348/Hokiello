@@ -9,14 +9,14 @@ TrelloClone.Routers.Boards = Backbone.Router.extend({
 		var newForm = new TrelloClone.Views.BoardsForm();
 		TrelloClone.Collections.boards.fetch();
 		$("#content").html(index.render().$el);
-		$("#form").html(newForm.render().$el);
+		$("#form").append(newForm.render().$el);
 	},
 	
 	boardShow: function(id){
 		var board = TrelloClone.Collections.boards.getOrFetch(id);
 		var showBoard = new TrelloClone.Views.BoardsShow({model: board});
-		TrelloClone.Collections.boards.fetch();
-		board.lists().fetch();
+		// TrelloClone.Collections.boards.fetch();
+	// 	board.lists().fetch();
 		$("#content").html(showBoard.render().$el);
  	},
 	
