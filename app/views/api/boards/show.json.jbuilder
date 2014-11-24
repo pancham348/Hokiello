@@ -2,5 +2,7 @@
 # it should include the board
 #  - its lists
 #    - the cards for each list
-json.(@board, :title, :user, :lists)
-
+json.extract!(@board, :title, :user, :lists)
+	@board.lists.each do |list|
+		json.extract!(list, :title, :cards)
+	end
