@@ -1,14 +1,15 @@
 module Api
   class ListsController < ApiController
-    before_action :require_board_member!
+    #before_action :require_board_member!
     
     def show
-      
+      @list = List.find(params[:id])
+            render json: @list
     end
     
     def create
-      @list = current_board.lists.new(list_params)
-
+      @list = List.new(list_params)
+      #@list.board_id = current_board.id
       if @list.save
         render json: @list
       else

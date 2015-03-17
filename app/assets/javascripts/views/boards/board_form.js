@@ -23,22 +23,3 @@ TrelloClone.Views.BoardsForm = Backbone.View.extend({
 
 });
 
-// ubmitForm: function(event){
-//     event.preventDefault();
-//     var formData = $("#new-form").serializeJSON();
-//     // debugger
-//     if(formData.feed.url.substring(0, 4) != "http") {
-//       alert("invalid")
-//       return
-//     }
-//     var model = new NewsReader.Models.Feed(formData);
-//
-//     model.save({
-//       success: function(){
-//         alert("successs");
-//       },
-//       errors: function(){
-//         alert("error, error, error");
-//       }
-//     });
-//   }
