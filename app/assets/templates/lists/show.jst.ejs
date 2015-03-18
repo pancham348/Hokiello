@@ -1,4 +1,8 @@
-<li class="list-item">
-		<%= list.escape("title") %>
-	<ul class="cards"></ul>
+<li class="list-item" data-id="<%= list.get('id') %>" >
+	<%= list.escape("title") %>
+	 <span class="destroy glyphicon glyphicon-remove" 
+	 data-id="<%= list.get('id') %>" style="cursor: pointer">
+	 </span>
+	<ul class="cards"></ul><br>
+	<div id="card-form"></div>
 </li>

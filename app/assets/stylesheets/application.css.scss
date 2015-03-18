@@ -42,9 +42,7 @@ body{
 	background-color: #660000;
 }
 
-li{
-	display: inline;
-}
+
 
 #board-index li{
 	background-size: cover;
@@ -56,17 +54,24 @@ li{
 	padding: 8px 12px 8px 12px;
 	position: relative;
 	text-decoration: none;
-	color: white;
-	margin: 5px;
+	color: #660000;
+	margin: .75%;
+	transition: all .1s ease-in-out;
+}
+
+#board-index li:hover { 
+	transform: scale(1.08); 
 }
 
 .board-list {
 	float: left;
 	width: 20%;
 	border: #ff6600 2px solid;
+	color: #660000;
 	background-color: #ff6600;
 	line-height: 50px;
 	padding: 3px;
+	box-shadow: 5px 5px 3px #D4A017;
 }
 
 .board-list a{
@@ -87,20 +92,6 @@ li{
 	margin: 5px;
 }
 
-.list-item {
-	float: left;
-	width: 100%;
-	border: #357ebd 2px solid;
-	background-color: #428bca;
-	display:inline;
-	line-height: 50px;
-	padding: 3px;
-}
-
-.list-item{
-	color: white;
-}
-
 h2{
 	margin-left: 75px;
 }
@@ -114,28 +105,6 @@ h2{
 	font-weight: 700;
 }
 
-.board-lists{
-	float: left;
-	    width: 20%;
-	    padding: 0;
-	    margin: 0;
-	    list-style-type: none;
-}
-
-.board-lists > div > .list-item{
-	background-size: cover;
-	background-position: center center;
-	border-radius: 3px;
-	display: inline;
-	font-weight: 700;
-	min-height: 18px;
-	padding: 8px 12px 8px 12px;
-	position: relative;
-	text-decoration: none;
-	color: white;
-	margin: 5px;
-}
-
 #boards{
 	margin-left: 5%;
 	margin-right: 5%;
@@ -147,7 +116,78 @@ h2{
 	margin-right: 5%;
 }
 
+#list-form{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 #new-form-button{
+	margin-top: 1%;
 	background-color: #ff6600;
 	color: #660000;
+}
+
+#new-card-button{
+	background-color: #660000;
+	color: #ff6600;
+}
+
+#board-show-lists{
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+	display: inline-block;
+    list-style-type: none;
+		
+}
+
+#board-show-lists .list-item{
+	background-size: cover;
+	background-position: center center;
+	border-radius: 3px;
+	display: inline-block;
+	font-weight: 700;
+	min-height: 18px;
+	padding: 8px 12px 8px 12px;
+	position: relative;
+	text-decoration: none;
+	color: #660000;
+	margin: .75%;
+	border: #ff6600 2px solid;
+	background-color: #ff6600;
+}
+
+.list-item {
+	float: left;
+	width: 20%;
+	border: #ff6600 2px solid;
+	background-color: #ff6600;
+	line-height: 50px;
+	padding: 3px;
+	box-shadow: 5px 5px 3px #D4A017;
+}
+
+.card-item{
+	background-size: cover;
+	background-position: center center;
+	border-radius: 3px;
+	display: inline-block;
+	font-weight: 700;
+	min-height: 18px;
+	padding: 8px 12px 8px 12px;
+	position: relative;
+	text-decoration: none;
+	color: #ff6600;
+	margin: .75%;
+	background-color: #660000;
+	float: left;
+	width: 80%;
+	box-shadow: 5px 5px 3px #D4A017;
+}
+
+#board-show-lists{
+	margin-left: 5%;
+	margin-right: 5%;
+	display: inline-block;
 }

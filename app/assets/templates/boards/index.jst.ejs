@@ -3,13 +3,13 @@
 
 <ul id="board-index">
 	<% boards.each(function(board){ %>
-			<li class="board-list"><a href="#/boards/<%= board.escape('id')%>"><%= board.get("title") %></a>
+			<a href="#/boards/<%= board.escape('id')%>"><li class="board-list"><%= board.get("title") %>
 				
 					 <span class="destroy glyphicon glyphicon-remove" 
 					 data-id="<%= board.get('id') %>" style="cursor: pointer">
 					 </span>
-			</li>
+			</li></a>
 		<% }) %><br>
 </ul><br>
 </div><br>
-  <div id='index-form'></div>
+<div id='index-form'></div>
