@@ -1,5 +1,8 @@
 <li class="card-item" data-id="<%= card.get('id') %>" >
 	<div class="card-title">
 		<%= card.escape("title") %>
+	 	<span class="destroy glyphicon glyphicon-remove" 
+	 		data-id="<%= card.get('id') %>" style="cursor: pointer">
+	 	</span>
 	</div>
 </li>

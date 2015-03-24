@@ -39,7 +39,7 @@
 }
 
 body{
-	background-color: #660000;
+	background: linear-gradient(to right, #660000, #751919);
 }
 
 
@@ -110,12 +110,6 @@ h2{
 	margin-right: 5%;
 }
 
-#index-form{
-	padding-top: 10%;
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
 #list-form{
 	margin-left: 5%;
 	margin-right: 5%;
@@ -123,8 +117,8 @@ h2{
 
 #new-form-button{
 	margin-top: 1%;
-	background-color: #ff6600;
-	color: #660000;
+	background-color: #660000;
+	color: #ff6600;
 }
 
 #new-card-button{
@@ -179,7 +173,7 @@ h2{
 	position: relative;
 	text-decoration: none;
 	color: #ff6600;
-	margin: .75%;
+	margin: 1.4%;
 	background-color: #660000;
 	float: left;
 	width: 80%;
@@ -190,4 +184,23 @@ h2{
 	margin-left: 5%;
 	margin-right: 5%;
 	display: inline-block;
+}
+
+#index-form{
+	background: grey;
+	border:grey 2px solid;
+	box-shadow: 5px 5px 3px white;
+}
+
+#new-board-div{
+	width: 100%;
+	cursor: pointer;
+	color: white;
+}
+
+.new-card-div{
+	display:inline-block;
+	width: 100%;
+	cursor: pointer;
+	color: white;
 }

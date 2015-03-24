@@ -1,7 +1,6 @@
-<h3 style="color: #660000">Create a New Card</h3>
-<form id="new-card-form">
+<form class="new-card-form">
 	<div class="form-group">
-	<label for="card_title" style="color: #660000">Title</label><br><input type="text" name="card[title]" id="card_title"><br>
+	<label for="card_title" style="color: #660000">Title</label><br><input type="text" name="card[title]" id="card_title<%= this.model.get('id') %>" ><br>
 	<label for="card_title" style="color: #660000">Description</label><br><input type="textarea" name="card[description]" id="card_description"><br>
 	<button class="btn-primary" id="new-card-button">Create a Card</button>
 	</div>

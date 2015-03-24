@@ -15,9 +15,10 @@ TrelloClone.Views.CardsForm = Backbone.View.extend({
 	  
 	  submitForm: function(event){
 		  var view = this;
+		  var cardTitle = "#card_title" + this.model.id;
 		  event.preventDefault();
 	 	this.model.cards().create ({
-	 		title: $("#card_title").val(),
+	 		title: $(cardTitle).val(),
 			list_id: this.model.id
 	 	})
 			  

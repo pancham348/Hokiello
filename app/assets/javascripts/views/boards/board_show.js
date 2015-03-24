@@ -4,6 +4,7 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 	
     events: {
 		"click .destroy" : "destroyList",
+		"click #new-board-header" : "showForm"
 	},
   	
 	initialize: function (){
@@ -24,6 +25,8 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 	  this.$el.html(content);
 	  this.model.lists().each(this.addList.bind(this));
 	  this.addListForm();
+	  $collapseForm = this.$el.find("#new-list-form")
+	  $collapseForm.hide();
   	  return this;
   },
 	
@@ -36,6 +39,11 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
   		var listsForm = new TrelloClone.Views.ListsForm({model: this.model, board: this.model});
   		this.addSubview("#list-form", listsForm);
   	},
+	
+	showForm: function(){
+  	  $form = this.$el.find("#new-list-form")
+  	  $form.toggle();
+	},
 	
     destroyList: function(event){
   	  //event.preventDefault();

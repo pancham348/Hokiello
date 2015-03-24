@@ -1,7 +1,12 @@
 module Api
   class CardsController < ApiController
     before_action :require_board_member!
-
+    
+    def show
+      @card = Card.find(params[:id])
+      render json: @card
+    end
+    
     def create
       @card = current_list.cards.new(card_params)
 
@@ -20,6 +25,12 @@ module Api
         render json: @card.errors.full_messages,
                status: :unprocessable_entity
       end
+    end
+    
+    def destroy
+      @card = Card.find(params[:id])
+      @card.destroy
+      render json: {}
     end
 
     private

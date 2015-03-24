@@ -5,6 +5,7 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
 	  },
   events:{
   	  "click .destroy" : "destroyBoard",
+	  "click #new-board-div" : "showForm"
   },
   
   template: JST['boards/index'],
@@ -13,7 +14,9 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
 	  var content = this.template({boards: this.collection});
 	  this.$el.html(content);
 	// $("#content").append(newForm.render().$el);
-	this.addBoardForm();
+	  this.addBoardForm();
+	  $collapseForm = this.$el.find("#new-board-form")
+	  $collapseForm.hide();
 	  return this;
   } ,
   
@@ -22,6 +25,11 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
 	this.addSubview("#index-form", boardForm)
   },
   
+  showForm: function(){
+	  $form = this.$el.find("#new-board-form")
+	  $form.toggle();
+  },
+
   destroyBoard: function(event){
 	  event.preventDefault();
 	  var $board = $(event.currentTarget);
