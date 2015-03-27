@@ -14,6 +14,7 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'rename'
 gem 'newrelic_rpm'
+gem 'foreman'
 
 group :doc do
   gem 'sdoc', require: false
