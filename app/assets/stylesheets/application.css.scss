@@ -187,8 +187,8 @@ h2{
 }
 
 #index-form{
-	background: grey;
-	border:grey 2px solid;
+	background: lightgrey;
+	border:lightgrey 2px solid;
 	box-shadow: 5px 5px 3px white;
 }
 
@@ -203,4 +203,35 @@ h2{
 	width: 100%;
 	cursor: pointer;
 	color: white;
+}
+
+#sign-in-form{
+	color:#ff6600;
+	margin-left: 10%;
+}
+
+#boards h3{
+	margin-left: 0.8%;
+}
+
+#mascot{
+	float: right;
+	position: relative;
+	margin-left: 300px;
+}
+
+#sign-in-page{
+	margin-left: 10%;
+	display: inline-flex;
+}
+
+.home-text{
+	font-size: 25px;
+	font-style: italic;
+	color:#ff6600;
+	font-variant: small-caps;
+}
+
+.navbar-login a{
+	color: #660000
 }

@@ -27,7 +27,7 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
   
   showForm: function(){
 	  $form = this.$el.find("#new-board-form")
-	  $form.toggle();
+	  $form.toggle(500);
   },
 
   destroyBoard: function(event){

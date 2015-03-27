@@ -1,12 +1,28 @@
-<h1>Sign In</h1>
-
-<form action="/session" method="post">
+<div id="sign-in-page">
+<form  action="/session" method="post">
+<div id="sign-in-form" class="form-group">
+  <h1>Sign In</h1>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label>Email<br>
-    <input name="user[email]" type="text"><br>
+    <input class="form-control" id="username" name="user[email]" type="text"><br>
   </label><br>
   <label>Password<br>
-    <input name="user[password]" type="password"><br>
+    <input class="form-control"  id="password" name="user[password]" type="password"><br>
   </label><br>
-  <input type="submit" value="Submit" class="btn btn-primary"><br>
-</form>
+  <input type="submit" value="Submit" class="btn btn-primary" id="sign-in-btn"><br>
+</form><br>
+<button class="btn btn-primary" id="guest-btn">Guest Log In</button><br>
+</div>
+<div id="mascot">
+	<img src="<%= image_path('hokiebird.gif')%>"></img><br>
+	<p class="home-text">Do you want to invent the future?</p>
+	<p class="home-text">Get organized first!</p>
+</div>
+</div>
+<script>
+$("#guest-btn").click(function guestLogIn(){
+	$("#username").val("ripe@gmail.com")
+	$("#password").val("password")
+	$("#sign-in-btn").trigger("click")
+});
+</script>
