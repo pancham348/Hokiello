@@ -18,7 +18,7 @@ module Api
 
     def index
       @boards = current_user.boards
-      render json: @boards
+      render json: @boards.sort_by(&:id)
     end
 
     def show
