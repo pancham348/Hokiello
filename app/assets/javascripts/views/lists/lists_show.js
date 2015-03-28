@@ -36,7 +36,7 @@ TrelloClone.Views.ListsShow = Backbone.CompositeView.extend({
 	
     showCardForm: function(){
   	  $form = this.$el.find(".new-card-form")
-  	  $form.toggle();
+  	  $form.toggle(500);
     },
 	
 	addCardForm: function(){
