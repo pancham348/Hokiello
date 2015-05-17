@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Hokiello::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+Hokiello::Application.config.secret_key_base = '6241f1a82db674aa60786dc31ba15d061c4d3f5c6131867acef295a5cdd5debca35a3afe3fc250f443f004ecd0ab197dc24d37def400a63ded6d4236849dfcd2'

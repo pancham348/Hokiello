@@ -9,10 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require jquery.ui.all
  *= require_tree .
  */
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
@@ -36,6 +36,24 @@
 	.navbar-brand{
 		color: #660000;
 	}
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+	width: 100%;
+	background-color: #ff6600;
+	border-color: #660000;
+	color: #660000;
+	height:7%;
+	clear: both;
+	vertical-align:middle;
+}
+
+
+.footer a{
+	color:#660000;
 }
 
 body{
@@ -129,6 +147,7 @@ h2{
 #board-show-lists{
     float: left;
     width: 100%;
+		height: 100%;
     padding: 0;
     margin: 0;
 	display: inline-block;
@@ -234,4 +253,20 @@ h2{
 
 .navbar-login a{
 	color: #660000
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: #660000
+}
+
+.lane{
+	display:block; 
+	margin-top: 30%; 
+	width: 100%
+}
+
+.new-card-div {
+	&:hover{
+		background-color: #961914;
+	};
 }

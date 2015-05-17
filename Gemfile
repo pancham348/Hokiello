@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rename'
 gem 'newrelic_rpm'
 gem 'foreman'
+gem 'react-rails', '~> 1.0'
 
 group :doc do
   gem 'sdoc', require: false
