@@ -187,16 +187,15 @@ h2{
 	border-radius: 3px;
 	display: inline-block;
 	font-weight: 700;
-	min-height: 18px;
-	padding: 8px 12px 8px 12px;
+	min-height: 12px;
+	padding: 1.5%;
 	position: relative;
 	text-decoration: none;
 	color: #ff6600;
-	margin: 1.4%;
+	margin-top: 3.5%;
 	background-color: #660000;
-	float: left;
-	width: 80%;
-	box-shadow: 5px 5px 3px #D4A017;
+	width: 100%;
+	//box-shadow: 5px 5px 3px #D4A017;
 }
 
 #board-show-lists{
@@ -222,6 +221,10 @@ h2{
 	width: 100%;
 	cursor: pointer;
 	color: white;
+	margin-top: 3%;
+	&:hover{
+		background-color: #961914;
+	};
 }
 
 #sign-in-form{
@@ -264,9 +267,13 @@ h2{
 	margin-top: 30%; 
 	width: 100%
 }
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
 
-.new-card-div {
-	&:hover{
-		background-color: #961914;
-	};
+#new-card-button{
+	margin-top: 10%;
+}
+
+.cards{
+  display: inline;
+  list-style-type: none;
 }

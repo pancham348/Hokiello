@@ -27,15 +27,6 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 	  this.addListForm();
 	  $collapseForm = this.$el.find("#new-list-form")
 	  $collapseForm.hide();
-		
-		// this.$(".board-show-lists").sortable({
-	// 		items: ".list-item"
-	// 	});
-		// var $card = this.$el.find(".cards");
-	// 	$card.sortable({
-	// 		items: ".card-item",
-	// 		axis: "y"
-	// 	});
   	return this;
   },
 	
@@ -43,7 +34,8 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 		var listsShow = new TrelloClone.Views.ListsShow({model: list});
 		this.addSubview(".board-show-lists", listsShow)
 		this.$(".board-show-lists").sortable({
-			items: ".list-item"
+			items: ".list-item",
+			tolerance: "intersect"
 		});
 	},
 	
@@ -54,7 +46,7 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 	
 	showForm: function(){
   	  $form = this.$el.find("#new-list-form")
-  	  $form.toggle();
+  	  $form.toggle(500);
 	},
 	
   destroyList: function(event){
