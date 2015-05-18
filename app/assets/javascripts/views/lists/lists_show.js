@@ -33,12 +33,6 @@ TrelloClone.Views.ListsShow = Backbone.CompositeView.extend({
   	addCard: function(card){
   		var cardsShow = new TrelloClone.Views.CardsShow({model: card});
 			this.addSubview(".cards", cardsShow);
-			var $card = this.$el.find(".cards");
-			$(".cards").sortable({
-				items: ".card-item",
-				placeholder: "card-item ui-state-highlight",
-				connectWith: ".cards"
-			});
   	},
 	
     showCardForm: function(){
@@ -52,7 +46,12 @@ TrelloClone.Views.ListsShow = Backbone.CompositeView.extend({
 	},
 	
 	renderCards: function(){
-		this.model.cards().each(this.addCard.bind(this))
+		this.model.cards().each(this.addCard.bind(this));
+		var $card = this.$el.find(".cards");
+		$card.sortable({
+			items: ".card-item",
+			placeholder: "ui-state-highlight"
+		});
 	},
 	
 	destroyCard: function(event){
