@@ -187,7 +187,7 @@ h2{
 	border-radius: 3px;
 	display: inline-block;
 	font-weight: 700;
-	min-height: 12px;
+	min-height: 4em;
 	padding: 1.5%;
 	position: relative;
 	text-decoration: none;
@@ -267,7 +267,21 @@ h2{
 	margin-top: 30%; 
 	width: 100%
 }
-.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+.ui-state-highlight { 
+	background-size: cover;
+	background-position: center center;
+	border-radius: 3px;
+	display: inline-block;
+	font-weight: 700;
+	min-height: 4em;
+	padding: 1.5%;
+	position: relative;
+	text-decoration: none;
+	color: #ff6600;
+	margin-top: 3.5%;
+	background-color: yellow;
+	width: 100%; 
+}
 
 #new-card-button{
 	margin-top: 10%;

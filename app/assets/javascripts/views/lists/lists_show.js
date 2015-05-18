@@ -36,7 +36,7 @@ TrelloClone.Views.ListsShow = Backbone.CompositeView.extend({
 			var $card = this.$el.find(".cards");
 			$card.sortable({
 				items: ".card-item",
-				placeholder: "ui-state-highlight",
+				placeholder: "card-item ui-state-highlight",
 				tolerance: "intersect",
 				connectWith: ".cards"
 			});
